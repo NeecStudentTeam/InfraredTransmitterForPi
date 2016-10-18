@@ -22,6 +22,6 @@ arg2 : Test Mode Flg (not use gpio)
 `PATH`
 
 ```
-sudo ln -s ~InfraredTransmitterForPi/sendir /usr/bin/sendir
+sudo ln -s ~/InfraredTransmitterForPi/sendir /usr/bin/sendir
 sudo chmod ugo+x /usr/bin/sendir
 ```
