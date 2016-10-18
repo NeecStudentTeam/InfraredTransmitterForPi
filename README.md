@@ -11,7 +11,7 @@ Simple to use infrared transmitter for pi
 arg1 : IRDATA  
 arg2 : Test Mode Flg (not use gpio)
 
-`sudo ./irsender 55324 0`
+`sudo ./sendir 55324 0`
 
 ## Build
 
