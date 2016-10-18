@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
   }
   
   // Finalize WiringPi
-  finalizeWiringPi()
+  finalizeWiringPi();
   
   printf("end\n");
   
@@ -67,13 +67,11 @@ int initializeWiringPi() {
   return 0;
 }
 
-int finalizeWiringPi() {
-  if(isTestMode) return 0;
+void finalizeWiringPi() {
+  if(isTestMode) return;
   
   // Turn off
   digitalWrite(GPIO,0);
-  
-  return 0;
 }
 
 void digitalWriteWrap(int pin, int value) {
