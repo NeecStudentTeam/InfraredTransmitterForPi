@@ -1,7 +1,8 @@
 // Include header file
-#include <wiringPi.h>
+// #include <wiringPi.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <windows.h>
 
 // Define GPIO18 number
 #define GPIO 18
@@ -14,6 +15,7 @@ void finalizeWiringPi();
 void digitalWriteWrap(int, int);
 int countBitFor32bit(unsigned int);
 int getMsbFor32bit(unsigned int);
+void delay(int);
 
 // Main function
 int main(int argc, char *argv[]) {
@@ -59,10 +61,10 @@ int initializeWiringPi() {
   if(isTestMode) return 0;
   
   // Initialize WiringPi
-  if(wiringPiSetupGpio() == -1) return 1;
+  // if(wiringPiSetupGpio() == -1) return 1;
   
   // Set GPIO pin to output mode
-  pinMode(GPIO, OUTPUT);
+  // pinMode(GPIO, OUTPUT);
   
   return 0;
 }
@@ -71,7 +73,7 @@ void finalizeWiringPi() {
   if(isTestMode) return;
   
   // Turn off
-  digitalWrite(GPIO,0);
+  // digitalWrite(GPIO,0);
 }
 
 void digitalWriteWrap(int pin, int value) {
@@ -79,7 +81,7 @@ void digitalWriteWrap(int pin, int value) {
     printf("GPIO WRITE pin : %d, value: %d\n", pin, value);
   }
   else {
-    digitalWrite(pin,value);
+    // digitalWrite(pin,value);
   }
 }
 
@@ -99,4 +101,8 @@ int getMsbFor32bit(unsigned int v) {
   v |= (v >> 8);
   v |= (v >> 16);
   return countBitFor32bit(v) - 1;
+}
+
+void delay(int ms) {
+  Sleep(ms);
 }

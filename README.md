@@ -15,7 +15,13 @@ arg2 : Test Mode Flg (not use gpio)
 
 ## Build
 
+for raspberry pi
+
 `sudo gcc sendir.cpp -osendir -lwiringPi`
+
+for windows stub
+
+`sudo gcc sendir_windows_stub.cpp -osendir_windows_stub`
 
 ## Installation
 
