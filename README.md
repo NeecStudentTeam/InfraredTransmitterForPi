@@ -15,4 +15,13 @@ arg2 : Test Mode Flg (not use gpio)
 
 ## Build
 
-`sudo gcc ir_sender.cpp -oir_sender -lwiringPi`
+`sudo gcc sendir.cpp -osendir -lwiringPi`
+
+## Installation
+
+`PATH`
+
+```
+sudo ln -s ~InfraredTransmitterForPi/sendir /usr/bin/sendir
+sudo chmod ugo+x /usr/bin/sendir
+```
