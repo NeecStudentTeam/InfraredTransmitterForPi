@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
   
   // send ir
   for(int i = msb; i >= 0; i--) { 
-    int bit = data >> i & (uint)1; 
+    int bit = data >> i & (unsigned int)1; 
     if(bit) { 
       digitalWriteWrap(GPIO, 1);
     } else {
