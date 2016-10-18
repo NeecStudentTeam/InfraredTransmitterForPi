@@ -15,4 +15,4 @@ arg2 : Test Mode Flg (not use gpio)
 
 ## Build
 
-`sudo ir_sender.cpp -oir_sender -lwiringPi`
+`sudo gcc ir_sender.cpp -oir_sender -lwiringPi`
